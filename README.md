@@ -4,7 +4,7 @@
 
 ### Description
 
-Johanan and Gideon's Shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). Additional functions are also included. This program was written entirely in C as a milestone project for Holberton School.
+Johanan and Gideon's Shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). Additional functions are also included. This program was written entirely in C as a milestone project for main School.
 
 ### Installation
 
@@ -99,4 +99,4 @@ env: env
 - check_path.c - functions for checking the path of an executable
 - error_handler.c - functions for dealing with errors
 - free.c - functions for freeing allocated memory
-- holberton.h - header file
+- main.h - header file
