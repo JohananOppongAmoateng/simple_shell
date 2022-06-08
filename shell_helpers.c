@@ -1,40 +1,40 @@
 #include "main.h"
 
 /**
- * insertNullByte - inserts null byte at given index
- * @str: input string
- * @index: index to insert null byte
- */
+* insertNullByte - inserts null byte at given index
+* @str: input string
+* @index: index to insert null byte
+*/
 void insertNullByte(char *str, unsigned int index)
 {
-	str[index] = '\0';
+str[index] = '\0';
 }
 
 /**
- * displayPrompt - displays shell prompt
- */
+* displayPrompt - displays shell prompt
+*/
 void displayPrompt(void)
 {
-	write(STDERR_FILENO, "$ ", 2);
+write(STDERR_FILENO, "$ ", 2);
 }
 
 /**
- * displayNewLine - displays new line
- */
+* displayNewLine - displays new line
+*/
 void displayNewLine(void)
 {
-	write(STDOUT_FILENO, "\n", 1);
+write(STDOUT_FILENO, "\n", 1);
 }
 
 /**
- * sigintHandler - catches SIGINT signal and reset signal
- * @sigint: signal from stdint
- */
+* sigintHandler - catches SIGINT signal and reset signal
+* @sigint: signal from stdint
+*/
 void sigintHandler(int sigint)
 {
-	(void)sigint;
-	signal(SIGINT, sigintHandler);
-	displayNewLine();
-	displayPrompt();
-	fflush(stdout);
+(void)sigint;
+signal(SIGINT, sigintHandler);
+displayNewLine();
+displayPrompt();
+fflush(stdout);
 }
