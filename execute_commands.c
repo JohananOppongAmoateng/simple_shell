@@ -12,8 +12,15 @@ void execute_commands(const char *command)
     else if (child_pid == 0)
     {
         /*child process*/
-        execlp(command,command,(char *)NULL);
-        perror("execlp");
+        char *args[128];
+
+        /*parse the command and its arguments*/
+        parse_command(command,args)
+        
+        // execlp(command,command,(char *)NULL);
+        execlp(args[0],args);
+        // perror("execlp");
+        _print("Error executing command.\n");
         exit(EXIT_FAILURE);
     }
     else{
