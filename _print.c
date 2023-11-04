@@ -1,6 +1,6 @@
-#include "shell.h"
+#include "main.h"
 
-void _print(const char *message)
+void _print(const char *text)
 {
-    write(STDOUT_FILENO,message,strlen(message));
+    write(STDOUT_FILENO,text,strlen(text));
 }
