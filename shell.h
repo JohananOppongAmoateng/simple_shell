@@ -21,6 +21,6 @@ void prompt_displayer(void);
 void nojo_print(const char *letyouknow);
 void kickeroff_command(const char *command);
 void ingest_command(char *command, size_t size);
-
+void parse_command(const char *command,char *args);
 
 #endif /* SHELL_H */

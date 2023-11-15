@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 void parse_command(const char *command,char *args)
 {
