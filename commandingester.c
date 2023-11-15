@@ -1,14 +1,14 @@
-#include "main.h"
+#include "shell.h"
 
-void read_commands(char *command,size_t size)
+void ingest_command(char *command,size_t size)
 {
     if (fgets(command,size,stdin) == NULL){
         if (feof(stdin)){
-            _print("\n");
+            nojo_print("\n");
             exit(EXIT_SUCCESS);
         }
         else{
-            _print("Error while reading output.\n");
+            nojo_print("Error while ingesting input.\n");
             exit(EXIT_FAILURE);
         }
     }
